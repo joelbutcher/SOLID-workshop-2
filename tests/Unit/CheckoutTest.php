@@ -19,7 +19,7 @@ class CheckoutTest extends TestCase
     {
         $receipt = new Receipt;
         $stripe = \Mockery::mock(Stripe::class);
-        $stripe->shouldReceive('process')->once()->andReturn($receipt)
+        $stripe->shouldReceive('process')->once()->andReturn($receipt);
 
         $checkout = new Checkout($stripe);
         $this->assertEquals($receipt, $checkout->process($receipt));
@@ -33,7 +33,7 @@ class CheckoutTest extends TestCase
     {
         $receipt = new Receipt;
         $mollie = \Mockery::mock(Mollie::class);
-        $mollie->shouldReceive('process')->once()->andReturn($receipt)
+        $mollie->shouldReceive('process')->once()->andReturn($receipt);
 
         $checkout = new Checkout($mollie);
         $this->assertEquals($receipt, $checkout->process($receipt));
@@ -47,7 +47,7 @@ class CheckoutTest extends TestCase
     {
         $receipt = new Receipt;
         $payPal = \Mockery::mock(PayPal::class);
-        $payPal->shouldReceive('process')->once()->andReturn($receipt)
+        $payPal->shouldReceive('process')->once()->andReturn($receipt);
 
         $checkout = new Checkout($payPal);
         $this->assertEquals($receipt, $checkout->process($receipt));
