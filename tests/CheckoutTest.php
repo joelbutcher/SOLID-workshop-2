@@ -15,42 +15,42 @@ class CheckoutTest extends TestCase
     /**
      * @test
      */
-    public function itCallsAcceptForStripe()
+    public function itCallsProcessForStripe()
     {
         $receipt = new Receipt;
         $stripe = \Mockery::mock(Stripe::class);
-        $stripe->shouldReceive('accept')->once()->andReturn($receipt)
+        $stripe->shouldReceive('process')->once()->andReturn($receipt)
 
         $checkout = new Checkout($stripe);
-        $this->assertNull($checkout->beginTransaction($receipt));
+        $this->assertEquals($receipt, $checkout->process($receipt));
         
     }
   
     /**
      * @test
      */
-    public function itCallsAcceptForMollie()
+    public function itCallsProcessForMollie()
     {
         $receipt = new Receipt;
         $mollie = \Mockery::mock(Mollie::class);
-        $mollie->shouldReceive('accept')->once()->andReturn($receipt)
+        $mollie->shouldReceive('process')->once()->andReturn($receipt)
 
         $checkout = new Checkout($mollie);
-        $this->assertNull($checkout->beginTransaction($receipt));
+        $this->assertEquals($receipt, $checkout->process($receipt));
         
     }
   
     /**
      * @test
      */
-    public function itCallsAcceptForPayPal()
+    public function itCallsProcessForPayPal()
     {
         $receipt = new Receipt;
         $payPal = \Mockery::mock(PayPal::class);
-        $payPal->shouldReceive('accept')->once()->andReturn($receipt)
+        $payPal->shouldReceive('process')->once()->andReturn($receipt)
 
         $checkout = new Checkout($payPal);
-        $this->assertNull($checkout->beginTransaction($receipt));
+        $this->assertEquals($receipt, $checkout->process($receipt));
         
     }
 }
