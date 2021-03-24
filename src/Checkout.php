@@ -2,8 +2,6 @@
 
 namespace App;
 
-use App\Receipt;
-
 class Checkout
 {
     /**
@@ -12,7 +10,7 @@ class Checkout
     private $method;
 
     /**
-     * Create a new checkout instance
+     * Create a new checkout instance.
      *
      * @param  string  $method
      * @return void
@@ -23,7 +21,7 @@ class Checkout
     }
 
     /**
-     * Begin acccepting a transaction for a receipt
+     * Begin acccepting a transaction for a receipt.
      *
      * @param  \App\Receipt  $receipt
      * @return void
@@ -44,7 +42,7 @@ class Checkout
     }
 
     /**
-     * Process a receipt via Stripe
+     * Process a receipt via Stripe.
      *
      * @param  \App\Receipt  $receipt
      * @return void
@@ -55,7 +53,7 @@ class Checkout
     }
 
     /**
-     * Process a receipt via Mollie
+     * Process a receipt via Mollie.
      *
      * @param  \App\Receipt  $receipt
      * @return void
