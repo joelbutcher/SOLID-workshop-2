@@ -6,7 +6,7 @@ interface PaymentProcessorInterface
 {
     /**
      * Process a receipt.
-     *    
+     *
      * @param  \App\Receipt  $receipt
      * @return \App\Receipt
      */
