@@ -39,6 +39,8 @@ class Checkout
         if ($this->method === 'paypal') {
             $this->processPayPal($receipt);
         }
+        
+        return $receipt;
     }
 
     /**
@@ -47,7 +49,7 @@ class Checkout
      * @param  \App\Receipt  $receipt
      * @return void
      */
-    private function processStripe(Receipt $receipt)
+    private function processStripe(Receipt &$receipt)
     {
         //
     }
@@ -58,7 +60,7 @@ class Checkout
      * @param  \App\Receipt  $receipt
      * @return void
      */
-    private function processMollie(Receipt $receipt)
+    private function processMollie(Receipt &$receipt)
     {
         //
     }
@@ -69,7 +71,7 @@ class Checkout
      * @param  \App\Receipt  $receipt
      * @return void
      */
-    private function processPayPal(Receipt $receipt)
+    private function processPayPal(Receipt &$receipt)
     {
         //
     }
