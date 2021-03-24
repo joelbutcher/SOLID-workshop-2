@@ -1,6 +1,6 @@
 <?php
 
-nanespace App;
+namespace App;
 
 interface PaymentProcessorInterface
 {
