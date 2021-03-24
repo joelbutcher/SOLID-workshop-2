@@ -12,7 +12,7 @@ class Stripe implements PaymentProcessorInterface
     public function process(Receipt $receipt)
     {
         // Logic
-        
+
         return $receipt;
     }
 }
