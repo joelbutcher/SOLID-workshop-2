@@ -39,7 +39,7 @@ class Checkout
         if ($this->method === 'paypal') {
             $this->processPayPal($receipt);
         }
-        
+
         return $receipt;
     }
 
