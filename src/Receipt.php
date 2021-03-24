@@ -1,6 +1,6 @@
 <?php
 
-namespace Workshop;
+namespace App;
 
 class Receipt
 {
