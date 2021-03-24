@@ -11,7 +11,6 @@ use PHPUnit\Framework\TestCase;
 
 class CheckoutTest extends TestCase
 {
-
     /**
      * @test
      */
@@ -24,7 +23,7 @@ class CheckoutTest extends TestCase
         $checkout = new Checkout($stripe);
         $this->assertEquals($receipt, $checkout->process($receipt));
     }
- 
+
     /**
      * @test
      */
