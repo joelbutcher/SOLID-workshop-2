@@ -2,7 +2,7 @@
 
 namespace App;
 
-use App/Receipt;
+use App\Receipt;
 
 class Checkout
 {
