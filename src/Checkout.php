@@ -64,7 +64,7 @@ class Checkout
     }
 
     /**
-     * Process a receipt via PayPal
+     * Process a receipt via PayPal.
      *
      * @param  \App\Receipt  $receipt
      * @return void
