@@ -1,8 +1,8 @@
 <?php
 
-namespace Workshop;
+namespace App;
 
-use Workshop/Receipt;
+use App/Receipt;
 
 class Checkout
 {
