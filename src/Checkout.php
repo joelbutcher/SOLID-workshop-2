@@ -25,53 +25,53 @@ class Checkout
     /**
      * Begin acccepting a transaction for a receipt
      *
-     * @param  \Workshop\Receipt  $receipt
+     * @param  \App\Receipt  $receipt
      * @return void
      */
-    public function beginTransaction(Receipt $receipt)
+    public function process(Receipt $receipt)
     {
         if ($this->method === 'stripe') {
-            $this->acceptStripe($receipt);
+            $this->processStripe($receipt);
         }
 
         if ($this->method === 'mollie') {
-            $this->acceptMollie($receipt);
+            $this->processMollie($receipt);
         }
 
         if ($this->method === 'paypal') {
-            $this->acceptPayPal($receipt);
+            $this->processPayPal($receipt);
         }
     }
 
     /**
-     * Accept a receipt and process it via Stripe
+     * Process a receipt via Stripe
      *
-     * @param  \Workshop\Receipt  $receipt
+     * @param  \App\Receipt  $receipt
      * @return void
      */
-    private function acceptStripe(Receipt $receipt)
+    private function processStripe(Receipt $receipt)
     {
         //
     }
 
     /**
-     * Accept a receipt and process it via Mollie
+     * Process a receipt via Mollie
      *
-     * @param  \Workshop\Receipt  $receipt
+     * @param  \App\Receipt  $receipt
      * @return void
      */
-    private function acceptMollie(Receipt $receipt)
+    private function processMollie(Receipt $receipt)
     {
         //
     }
 
     /**
-     * Accept a receipt and process it via PayPal
+     * Process a receipt via PayPal
      *
-     * @param  \Workshop\Receipt  $receipt
+     * @param  \App\Receipt  $receipt
      * @return void
      */
-    private function acceptPayPal(Receipt $receipt)
+    private function processPayPal(Receipt $receipt)
     {
         //
     }
