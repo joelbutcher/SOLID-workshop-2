@@ -23,9 +23,8 @@ class CheckoutTest extends TestCase
 
         $checkout = new Checkout($stripe);
         $this->assertEquals($receipt, $checkout->process($receipt));
-        
     }
-  
+ 
     /**
      * @test
      */
@@ -37,9 +36,8 @@ class CheckoutTest extends TestCase
 
         $checkout = new Checkout($mollie);
         $this->assertEquals($receipt, $checkout->process($receipt));
-        
     }
-  
+
     /**
      * @test
      */
@@ -51,6 +49,5 @@ class CheckoutTest extends TestCase
 
         $checkout = new Checkout($payPal);
         $this->assertEquals($receipt, $checkout->process($receipt));
-        
     }
 }
