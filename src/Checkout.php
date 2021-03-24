@@ -5,19 +5,19 @@ namespace App;
 class Checkout
 {
     /**
-     * @var string The payment method type.
+     * @var \App\PaymentProcessorInterface
      */
-    private $method;
+    private $paymentProcessor;
 
     /**
      * Create a new checkout instance.
      *
-     * @param  string  $method
+     * @param  \App\PaymentProcessorInterface  $paymentProcessor
      * @return void
      */
-    public function __construct(string $method)
+    public function __construct(PaymentProcessorInterface $paymentProcessor)
     {
-        $this->method = $method;
+        $this->paymentProcessor = $paymentProcessor;
     }
 
     /**
@@ -28,51 +28,6 @@ class Checkout
      */
     public function process(Receipt $receipt)
     {
-        if ($this->method === 'stripe') {
-            $this->processStripe($receipt);
-        }
-
-        if ($this->method === 'mollie') {
-            $this->processMollie($receipt);
-        }
-
-        if ($this->method === 'paypal') {
-            $this->processPayPal($receipt);
-        }
-
-        return $receipt;
-    }
-
-    /**
-     * Process a receipt via Stripe.
-     *
-     * @param  \App\Receipt  $receipt
-     * @return void
-     */
-    private function processStripe(Receipt &$receipt)
-    {
-        //
-    }
-
-    /**
-     * Process a receipt via Mollie.
-     *
-     * @param  \App\Receipt  $receipt
-     * @return void
-     */
-    private function processMollie(Receipt &$receipt)
-    {
-        //
-    }
-
-    /**
-     * Process a receipt via PayPal.
-     *
-     * @param  \App\Receipt  $receipt
-     * @return void
-     */
-    private function processPayPal(Receipt &$receipt)
-    {
-        //
+        return $this->paymentProcessor->process($receipt);
     }
 }
