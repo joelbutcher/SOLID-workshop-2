@@ -18,13 +18,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Workshop\\": "src/"
+            "App\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/",
-            "App\\": "stubs/app/"
         }
     },
     "minimum-stability": "dev"
