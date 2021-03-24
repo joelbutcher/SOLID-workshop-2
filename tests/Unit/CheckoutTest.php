@@ -2,12 +2,12 @@
 
 namespace Tests;
 
-use App/Checkout;
-use App/Mollie;
-use App/PayPal;
-use App/Receipt;
-use App/Stripe;
-use PHPUnit/Framework/TestCase;
+use App\Checkout;
+use App\Mollie;
+use App\PayPal;
+use App\Receipt;
+use App\Stripe;
+use PHPUnit\Framework\TestCase;
 
 class CheckoutTest extends TestCase
 {
