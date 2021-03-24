@@ -1,0 +1,31 @@
+{
+    "name": "joelbutcher/SOLID-workshop-2",
+    "description": "Example project for demonstrating the open-closed SOLID principle.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joel Butcher",
+            "email": "joel@joelbutcher.co.uk"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0",
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.0",
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Workshop\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/",
+            "App\\": "stubs/app/"
+        }
+    },
+    "minimum-stability": "dev"
+}
