@@ -4,20 +4,9 @@ namespace App;
 
 class Checkout
 {
-    /**
-     * @var string The payment method type.
-     */
-    private $method;
-
-    /**
-     * Create a new checkout instance.
-     *
-     * @param  string  $method
-     * @return void
-     */
-    public function __construct(string $method)
+    public function __construct(private string $method)
     {
-        $this->method = $method;
+        //
     }
 
     /**
