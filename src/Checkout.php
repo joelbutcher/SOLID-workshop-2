@@ -4,20 +4,9 @@ namespace App;
 
 class Checkout
 {
-    /**
-     * @var \App\PaymentProcessorInterface
-     */
-    private $paymentProcessor;
-
-    /**
-     * Create a new checkout instance.
-     *
-     * @param  \App\PaymentProcessorInterface  $paymentProcessor
-     * @return void
-     */
-    public function __construct(PaymentProcessorInterface $paymentProcessor)
+    public function __construct(private PaymentProcessorInterface $paymentProcessor)
     {
-        $this->paymentProcessor = $paymentProcessor;
+        //
     }
 
     /**
